@@ -15,7 +15,7 @@ if($queryStart >= 0 && $querySkip > 0) {
 
 
 
-    $query = "SELECT * FROM article_list ORDER BY article_create_time LIMIT $queryStart,$querySkip";
+    $query = "SELECT * FROM article_list ORDER BY article_create_time DESC LIMIT $queryStart,$querySkip";
     $queryAll = "SELECT COUNT(*) FROM article_list";
     $result = mysqli_query($dbc, $query);
     $resultAll = mysqli_query($dbc, $queryAll);
